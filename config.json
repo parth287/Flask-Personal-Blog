@@ -1,0 +1,18 @@
+{
+    "params":
+    {
+
+        "local_server" : "True",
+        "local_uri" : "mysql://root:@localhost/thunder",
+        "prod_uri": "mysql://root:@localhost/thunder",
+        "gmail-user" : "king9699018047@gmail.com",
+        "gmail-pass": "",
+        "no_of_posts" : 1,
+        "login_image": "solid.svg",
+        "uname":"parth",
+        "upassword":"123",
+        "uloc":"D:\\Python Projects\\Python tutorials\\Flask\\Blog\\static"
+    
+    }
+    
+}

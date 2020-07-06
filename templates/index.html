@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Thunder</h1>
+              <span class="subheading">A blog made using Flask. </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+ {% for post in posts %}
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+            <a href="/post/{{post.slug}}">
+              <h2 class="post-title">
+                {{post.title}}
+              </h2>
+              <h3 class="post-subtitle">
+                {{post.content[0:20]}}
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Admin</a>
+              on {{post.date}}</p>
+          </div>
+          <a class="btn btn-primary float-right" href="{{nextp}}">Next</a>
+          <a class="btn btn-primary float-left" href="{{prev}}">Previous</a>
+        </div>
+       
+      </div>
+    </div>
+    {% endfor %}
+    {% endblock %}
